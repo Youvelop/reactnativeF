@@ -4,14 +4,7 @@ import Home from './HomeComponent';
 import About from './AboutComponent';
 import Contact from './ContactComponent';
 import DishDetail from './DishDetailComponent';
-import {
-  View,
-  Text,
-  Platform,
-  Image,
-  StyleSheet,
-  ScrollView,
-} from 'react-native';
+import { View, Platform, Image, StyleSheet, ScrollView } from 'react-native';
 import {
   createStackNavigator,
   createDrawerNavigator,
@@ -137,21 +130,21 @@ const ContactNavigator = createStackNavigator(
 const CustomDrawerContentComponent = (props) => (
   <ScrollView>
     <SafeAreaView
-      style={styles.container}
+      style={StyleSheet.container}
       forceInset={{ top: 'always', horizontal: 'never' }}
     >
-      <View style={styles.drawerHeader}>
+      <View style={StyleSheet.drawerHeader}>
         <View style={{ flex: 1 }}>
           <Image
             source={require('./images/logo.png')}
-            style={styles.drawerImage}
+            style={StyleSheet.drawerImage}
           />
         </View>
         <View style={{ flex: 2 }}>
-          <Text style={styles.drawerHeaderText}>Ristorante Con Fusion</Text>
+          <Text style={StyleSheet.drawerHeaderText}>Ristorante Confusion</Text>
         </View>
       </View>
-      <DrawerItems {...props} />
+      <drawerItems {...props} />
     </SafeAreaView>
   </ScrollView>
 );
@@ -211,7 +204,6 @@ const MainNavigator = createDrawerNavigator(
   },
   {
     drawerBackgroundColor: '#512DA8',
-    contentComponent: CustomDrawerContentComponent,
   }
 );
 
@@ -242,16 +234,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
     flexDirection: 'row',
-  },
-  drawerHeaderText: {
-    color: 'white',
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  drawerImage: {
-    margin: 10,
-    width: 80,
-    height: 60,
   },
 });
 

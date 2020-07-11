@@ -137,18 +137,18 @@ const ContactNavigator = createStackNavigator(
 const CustomDrawerContentComponent = (props) => (
   <ScrollView>
     <SafeAreaView
-      style={styles.container}
+      style={StyleSheet.container}
       forceInset={{ top: 'always', horizontal: 'never' }}
     >
-      <View style={styles.drawerHeader}>
+      <View style={StyleSheet.drawerHeader}>
         <View style={{ flex: 1 }}>
           <Image
             source={require('./images/logo.png')}
-            style={styles.drawerImage}
+            style={StyleSheet.drawerImage}
           />
         </View>
         <View style={{ flex: 2 }}>
-          <Text style={styles.drawerHeaderText}>Ristorante Con Fusion</Text>
+          <Text style={StyleSheet.drawerHeaderText}>Ristorante Confusion</Text>
         </View>
       </View>
       <DrawerItems {...props} />
